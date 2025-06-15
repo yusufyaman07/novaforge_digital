@@ -1,0 +1,69 @@
+.service {
+  background-color: $extra-light;
+}
+
+.service__grid {
+  margin-block: 4rem;
+  display: grid;
+  gap: 1rem;
+
+  @include respond(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond(md) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.service__card {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: $white;
+  transition: 0.3s;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $text-dark;
+  }
+
+  .section__description {
+    text-align: left;
+  }
+
+  div {
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    border-radius: 5px;
+    padding: 5px 8px;
+    max-width: max-content;
+  }
+
+  &:nth-child(1) div {
+    background-color: #f0fdfa;
+    color: #00d5be;
+  }
+
+  &:nth-child(2) div {
+    background-color: #fff1f2;
+    color: #ff637e;
+  }
+
+  &:nth-child(3) div {
+    background-color: #faf5ff;
+    color: #c27aff;
+  }
+
+  &:nth-child(4) div {
+    background-color: #f0f9ff;
+    color: #00bcff;
+  }
+}

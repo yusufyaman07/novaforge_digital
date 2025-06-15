@@ -1,0 +1,67 @@
+.hero__container {
+  display: grid;
+  gap: 2rem;
+
+  @include respond(md) {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding-top: 2rem;
+  }
+}
+
+.hero__image img {
+  max-width: 550px;
+  margin-inline: auto;
+}
+
+.hero__content {
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    font-weight: 800;
+    color: $text-dark;
+    line-height: 4.75rem;
+    text-align: center;
+
+    span {
+      color: $secondary-color;
+    }
+
+    @include respond(md) {
+      text-align: left;
+    }
+  }
+
+  .section__description {
+    @include respond(md) {
+      text-align: left;
+    }
+  }
+
+  .hero__btns {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    @include respond(md) {
+      justify-content: flex-start;
+    }
+
+    a {
+      font-size: 1rem;
+      font-weight: 500;
+      color: $text-dark;
+      display: flex;
+      align-items: center;
+
+      i {
+        margin-right: 0.5rem;
+        font-size: 1.25rem;
+        border: 2px solid $text-dark;
+        border-radius: 50%;
+        padding: 0.25rem;
+      }
+    }
+  }
+}
